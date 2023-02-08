@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style-oc.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon" href="icon.png">
+    <title>Chord Maker</title>
+</head>
+<body>
+    <header>
+        <h1 id="title" ><a href="/index.html">Chords Format</a></h1>
+        <h2>Build your desired chord:</h2>
+    </header>
+    <main>
+        <div id="boxes">
+            <form id="main-form" class="forms boxess">
+                <h6>1) Start by clicking in any Dropdown:</h6>
+                <label for="mainChord">Chord =</label>
+                <select id="mainChord" onclick="MakeCh()">
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select><br>
+                <label for="minor">Major or Minor</label>
+                <select id="minor" onclick="MakeCh()">
+                    <option value="major">Major</option>
+                    <option value="minor">minor</option>
+                </select><br>
+                <label for="changes">Sharp or Flat</label>
+                <select id="changes" onclick="MakeCh()">
+                    <option value="none">-</option>
+                    <option value="#" >Sharp</option>
+                    <option value="b" >Flat</option>
+                </select><br>
+                <label for="suspended">Sustained</label>
+                <select id="suspended" onclick="MakeCh()">
+                    <option value="none">-</option>
+                    <option value="2">Sus2</option>
+                    <option value="4">Sus4</option>
+                </select><br>
+                <label for="number">Add degree</label>
+                <select id="number" onclick="MakeCh()">
+                    <option value="none">-</option>
+                    <option value="2">Add2</option>
+                    <option value="2M">Add2M</option>
+                    <option value="4">Add4J</option>
+                    <option value="4M">Add4A(5D)</option>
+                    <option value="6">Add6m(5A)</option>
+                    <option value="6M">Add6M</option>
+                    <option value="7">Add7</option>
+                    <option value="7M">Add7M</option>
+                    <option value="9">Add9</option>
+                    <option value="9M">Add9M</option>
+                </select>
+                
+                <br>
+            </form>
+            <div id="creator" class="boxess">
+                <h6>2) Click when done:</h6>
+                <a id="finCh" onclick="drawNotes()">Chord</a>
+            </div>
+            <form id="nextPage" action="print.html" method="POST" class="boxess">
+                <h6>3) These notes form the chord, click to see their formation:</h6>
+                <a id="chordTriad" href="print.html" onclick="printChords()" >Your Notes Will Show Here</a><br>    <!--!!!!!!!!!-->
+            </form>
+        </div>
+        <div>
+            <a id="back-button" href="index.html">Back</a>
+        </div>
+    </main>
+</body>
+<script type="text/javascript" src="first-page.js"></script>
+</html>
+<!--     <button id="finCh" onclick="setList()"></button><br>   -->
