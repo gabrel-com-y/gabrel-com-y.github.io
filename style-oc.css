@@ -2,7 +2,7 @@ body {
     font-family: 'Courier Prime', monospace;
     text-align: center;
     color: rgb(0, 255, 0)!important;
-    background: linear-gradient(45deg, green, blue, green, blue, green, blue, green, blue, green, blue);
+    background: linear-gradient(black, blue, black);
     overflow: auto;
     min-height: 1000px;
 }

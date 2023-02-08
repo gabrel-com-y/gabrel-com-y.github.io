@@ -3,7 +3,7 @@ body {
     text-align: center;
     color: #0d0;
     color: rgb(0, 255, 0)!important;
-    background: linear-gradient(45deg, green, blue, green, blue, green, blue, green, blue, green, blue);
+    background: linear-gradient(black, blue, black);
     overflow: auto;
     min-width: 380px;
     min-height: 700px;
