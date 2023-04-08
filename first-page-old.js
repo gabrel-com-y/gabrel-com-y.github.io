@@ -7,24 +7,6 @@ let xtra = false;
 let isMinor = false;
 let nope; 
 let info;
-document.body.style.backgroundColor = '#002B5B'
-
-function isChord() {
-    if (priCh == undefined) {
-        alert('Please select a chord');
-        const mainC = document.getElementById('mainChord');
-        mainC.style.backgroundColor = 'red';
-        mainC.onmouseover = function() {
-            mainC.style.backgroundColor = '#002B5B'; 
-        };
-        // mainC.onmouseout = function() {
-        //     mainC.style.backgroundColor = 'red'; 
-        // };
-    } else {
-        drawNotes();
-    }
-}
-
 
 function MakeCh() {
     let chord = document.querySelector("#mainChord").value;
@@ -251,20 +233,20 @@ function printChords() {
                 console.log("this is "+i)
                 let count = 0;
                 while (count < frets) {
-                    var currLetter = allLetters[i];
+                    var currentLetter = allLetters[i];
                     // Add letter if in chord
-                    if (currentList.includes(currLetter)) {
+                    if (currentList.includes(currentLetter)) {
                         // Check if is a Tonic note and Proper positioning in arm 
-                        if (position == 1 && currLetter == currentList[0] ||  position == 2 && currLetter == currentList[0] || position == 3 && currLetter == currentList[0]) {
-                            if (currLetter.length == 2) {
-                                string = string +'('+ currLetter +')'+ " | -";
+                        if (position == 1 && currentLetter == currentList[0] ||  position == 2 && currentLetter == currentList[0] || position == 3 && currentLetter == currentList[0]) {
+                            if (currentLetter.length == 2) {
+                                string = string +'('+ currentLetter +')'+ " | -";
                             } else {
-                                string = string +'('+ currLetter +')'+ "- | -";
+                                string = string +'('+ currentLetter +')'+ "- | -";
                             }
-                        } else if (currLetter.length == 2) {
-                            string = string +' '+ currLetter + "- | -";
+                        } else if (currentLetter.length == 2) {
+                            string = string +' '+ currentLetter + "- | -";
                         } else {
-                            string = string +' '+ currLetter + " - | -";
+                            string = string +' '+ currentLetter + " - | -";
                         } 
                         
                     } else {string += " - - | -";} 
@@ -322,16 +304,16 @@ function printChords() {
 //         if (fret == note) /* if E = e */ {
 //             let count = 0;
 //             while (count < frets) /* frets = 12 */ {
-//                 var currLetter = allLetters[i]; /* allLetters[5], currLetter = E*/
+//                 var currentLetter = allLetters[i]; /* allLetters[5], currentLetter = E*/
 //                 // Add letter if in chord
-//                 if (currentList.includes(currLetter)) {
+//                 if (currentList.includes(currentLetter)) {
 //                     // Check if is a Tonic note and Proper positioning in arm 
-//                     if (position == 1 && currLetter == currentList[0] ||  position == 2 && currLetter == currentList[0] || position == 3 && currLetter == currentList[0]) {
+//                     if (position == 1 && currentLetter == currentList[0] ||  position == 2 && currentLetter == currentList[0] || position == 3 && currentLetter == currentList[0]) {
 //                         /*Here*/
-//                         currentNote = "-" + currLetter + "-";
+//                         currentNote = "-" + currentLetter + "-";
 //                     }   /*Here*/  
 //                     else {
-//                         currentNote = currLetter
+//                         currentNote = currentLetter
 //                     }
 //                 } else {currentNote = "--"} 
 
