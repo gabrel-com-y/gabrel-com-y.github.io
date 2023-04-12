@@ -6,8 +6,10 @@ let sus = false;
 let xtra = false;
 let isMinor = false;
 let nope; 
-let info;
-document.body.style.backgroundColor = '#002B5B'
+let able = false;
+
+const ocs = document.querySelectorAll('.onClicks');
+ocs.disabled = true;
 
 function isChord() {
     if (priCh == undefined) {
@@ -24,9 +26,22 @@ function isChord() {
         drawNotes();
     }
 }
+function isReady() {
+    if (able == false) {
+        alert('Please select a chord');
+        const mainC = document.getElementById('mainChord');
+        mainC.style.backgroundColor = 'red';
+        mainC.onmouseover = function() {
+            mainC.style.backgroundColor = '#002B5B'; 
+        };
 
+    } else {
+        printChords();
+    }
+}
 
 function MakeCh() {
+    able = true;
     let chord = document.querySelector("#mainChord").value;
     let shFl = document.querySelector("#changes").value;
     let minor = document.querySelector("#minor").value;
@@ -157,6 +172,9 @@ function drawNotes() {
     }
 
     document.querySelector("#chordTriad").innerHTML = triad;
+    const chordName = document.querySelector('#chordTriad');
+    chordName.style.backgroundColor = 'red';
+
     sessionStorage.setItem('CHORD', lastTriad);
     sessionStorage.setItem('Note', chord);
 
@@ -182,8 +200,10 @@ function drawNotes() {
 function printChords() {
     let chord = sessionStorage.getItem('Note');
     let current = sessionStorage.getItem('CHORD');
-    let text = "Chord name: "+chord+" - Notes: "+current;
-    document.querySelector("#finalChord").innerHTML = text;
+    let text1 = "Chord name: "+chord;
+    let text2 = "Notes: "+current;
+    document.querySelector("#finalChord").innerHTML = text1;
+    document.querySelector("#finalChord2").innerHTML = text2;
 
     // ---------------------------------
     current += ",";
@@ -299,6 +319,15 @@ function printChords() {
     document.querySelector("#third-st").innerHTML = string3;
     document.querySelector("#second-st").innerHTML = string2;
     document.querySelector("#first-st").innerHTML = string1;
+    
+    const chordName = document.querySelector('#finalChord');
+    chordName.style.backgroundColor = 'red';
+    const chordName1 = document.querySelector('#finalChord2');
+    chordName1.style.backgroundColor = 'red';
+
+    // const chordName2 = document.querySelectorAll('.chNnotes');
+    // chordName2.style.backgroundColor = 'red';
+    // chordName2.innerHTML = 'a';
 
 
     // ---------------------------------------------------------------------------------------------

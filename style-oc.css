@@ -2,7 +2,6 @@ body {
     font-family: 'Courier Prime', monospace;
     text-align: center;
     color: #57C5B6;
-    /* background: linear-gradient(#002B5B, #57C5B6, #002B5B); */
     background-color: #002B5B;
     overflow: auto;
     min-height: 200%;
@@ -31,7 +30,6 @@ header h2 {
 }
 h6 {
     margin: 10px;
-    /* background-color: #222; */
     height: fit-content;
     font-size: 30px;
     color: #002B5B;
@@ -102,9 +100,14 @@ form p {
     margin: 0;
     border: 2px solid red;
 }
+.regularP {
+    border: none;
+    font-size: 70%;
+    text-decoration: underline red;
+}
 #update {
     /* display: none; */
-    font-size: 20px;
+    font-size: 80%;
     border: 2px solid grey;
     cursor: pointer;
 }
@@ -195,9 +198,14 @@ a#back-button {
     background-color: #222;
 } */
 
-span {
+.chNnotes {
     font-size: 50px;
-    border: 3px solid red;
+    /* border: 3px solid red; */
+    /* background-color: red; */
+    text-decoration: underline dotted red;
+    display: block;
+    width: 50%;
+    margin: 0 25%;
 }
 
 .board {
@@ -213,11 +221,14 @@ span {
     width: 80%;
     margin: 0;
     overflow-x: auto;
+    white-space: nowrap;
     color: black;
     background-color: #57C5B6;
 }
-
-p {
+/* .notes {
+    overflow: auto;
+} */
+.notes p {
     font-weight: 900;
     font-size: 16px;
 }
@@ -226,7 +237,7 @@ p {
 
 /* --------------------------TABLE------------------------- */
 
-/* table {
+table {
     margin: 10px;
     min-width: 1000px;
     background-color: #0f0;
@@ -235,19 +246,30 @@ p {
 }
 thead {
     background-color: #678;
-    color: #4c4;
+    color: #57C5B6;
     width: 100%;
     margin: 0;
 }
+.first {
+    background-color: #678;
+}
+.fretsCl {
+    background-color: black;
+}
+.one {
+    background-color: #00a;
+}
+.other {
+    background-color: #007;
+}
 th {
-    width: 6%;
+    width: 100px;
     text-align: center!important;
 }
 td {
-
     background-color: #007;
-    color: #4c4;
-} */
+    color: #57C5B6;
+}
 /* --------------------------TABLES------------------------- */
 
 

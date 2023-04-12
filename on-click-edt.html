@@ -61,8 +61,8 @@
                 
                 <br>
                 <p id="finCh">Chord</p>
-                Don't forget to update the value: 
-                <a id="update" onclick="isChord()">Update</a>
+                <p class="regularP">Don't forget to update the value:</p>   
+                <button type="button" class="onClicks"><a id="update"  onclick="isChord()">Update</a></button>
             </form>
 
             <!-- --------------------------------- -->
@@ -76,28 +76,30 @@
                 <!-- --------------------------------- -->
                 <form id="nextPage" action="print.html" method="POST" class="boxess">
                     <h6>2- The chord's notes:</h6>
-                    <a id="chordTriad" onclick="printChords()"> THE ARM</a>
+                    <button type="button" class="onClicks"><a id="chordTriad" onclick="isReady()"> THE CHORDS</a></button>
                 </form>
             </div>
             
         </div>
         <section id="showChord">
-            <span id="finalChord" >CHORD AND NOTES</span>
+            <div id="chsNnotes"></div>
+            <p id="finalChord" class="chNnotes" >CHORD</p>
+            <p id="finalChord2" class="chNnotes" >NOTES</p>
+
             <div class="board">
                 <div id="chords-div">
-                    <div id="frets">-|___1___|___2___|___3___|___4___|___5___|___6___|___7___|___8___|___9___|___10__|___11__|___12__| -</div>
+                    <div id="frets">- |___1___|___2___|___3___|___4___|___5___|___6___|___7___|___8___|___9___|___10__|___11__|___12__| -</div>
                     <div class="notes">
                         <p id="test"></p>
-                        <p id="sixth-st">E|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
-                        <p id="fifth-st">B|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
-                        <p id="fourth-st">G|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
-                        <p id="third-st">D|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
-                        <p id="second-st">A|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
-                        <p id="first-st">E|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
+                        <p id="sixth-st">E |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
+                        <p id="fifth-st">B |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
+                        <p id="fourth-st">G |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
+                        <p id="third-st">D |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
+                        <p id="second-st">A |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
+                        <p id="first-st">E |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___- __|___-___| -</p>
                     </div>
                 </div>
-            </div>
-        </section>
+                
         
         <div>
             <a id="back-button" href="index.html">Back</a>
@@ -106,4 +108,3 @@
 </body>
 <script type="text/javascript" src="first-page.js"></script>
 </html>
-<!--     <button id="finCh" onclick="setList()"></button><br>   -->
