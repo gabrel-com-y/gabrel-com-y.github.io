@@ -228,7 +228,7 @@ a#back-button {
 /* .notes {
     overflow: auto;
 } */
-.notes p {
+.board p {
     font-weight: 900;
     font-size: 16px;
 }
