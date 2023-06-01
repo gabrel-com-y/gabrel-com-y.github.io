@@ -127,7 +127,10 @@ td {
 .fretsCl {
     background-color: black;
 }
-.e {
+.one {
+    background-color: #007;
+}
+.other {
     background-color: #00a;
 }
 

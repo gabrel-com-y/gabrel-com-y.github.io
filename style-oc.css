@@ -5,12 +5,13 @@ body {
     background-color: #002B5B;
     overflow: auto;
     min-height: 200%;
+    min-width: 100%;
 }
 header {
     color: #000;
     font-family: 'Courier Prime', monospace;
     background-color: #57C5B6;
-    margin: 0% 10%;
+    margin: 0% 5%;
     padding: 1%;
 }
 h1 a {
@@ -37,14 +38,13 @@ h6 {
 }
 
 
+
 main {
     display: block;
 
 }
 #boxes {
     display: block;
-    /* flex-direction: column;
-    align-items: baseline; */
 }
 
 form {
@@ -55,7 +55,6 @@ form {
     margin: 1%;
     display: block;
     width: 50%;
-    /* width: calc(10%-50px); */
 }
 #main-form {
     display: inline-block;
@@ -70,7 +69,64 @@ label {
     font-size: 30px;
     cursor: text;
 }
+/*-----------------------INFO SUS---------------------------*/
+sup {
+    font-size: 20px;
+    color: red;
+}
+sup:hover {
+    color: black;
+    cursor: pointer;
+}
+div#susP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* this is a _demo_ container. remember the importance of relative and absolute positioning */
+.tooltip-container {
+    position: relative;
+    display: block;
+    place-content: center;
+}
+/* styling of the tooltip display */
+p#tooltip-text {
+    display: none;
+    position: absolute;
+    top: -120px;
+    left: -200%;
+    z-index: 1;
+    background: rgb(26, 95, 122);
+    padding: 8px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 2px;
+    /* animation: fadeIn 0.6s; */
+}
+
+/* optional styling to add a "wedge" to the tooltip */
+p#tooltip-text:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border: 8px solid transparent;
+    border-top: 8px solid red;
+  }
+  
+  /* @keyframes fadeIn {
+   from {
+     opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+  } */
+
+
+/*---------------------------------------------------*/
 button {
     font-size: 30px;
     margin: 0;
@@ -86,6 +142,7 @@ select {
     cursor: pointer;
     color: #57C5B6;
     background-color: #1A5F7A;
+    text-align: center;
 }
 select#mainChord {
     background-color: #002B5B;
@@ -95,36 +152,55 @@ select:hover{
     color: #57C5B6;
     background-color: #002B5B;
 }
+input#minor {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
 form p {
     font-size: 50px;
     margin: 0;
     border: 2px solid red;
+    padding: 0;
+}
+.hidden {
+    display: none;
+}
+.funct {
+    display: block;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    
+    /* font-size: 20px; */
+}
+#removeSection {
+    display: none;
+}
+
+#chordUpdt {
+    display: flex;
+    justify-content: center;
 }
 .regularP {
     border: none;
     font-size: 70%;
-    text-decoration: underline red;
+    /* text-decoration: underline red; */
 }
 #update {
-    /* display: none; */
     font-size: 80%;
     border: 2px solid grey;
     cursor: pointer;
+    margin-left: 10px;
 }
 
-
-#twoBox {
-    display: block;
-    width: 100%;
+#clearBtn {
+    font-size: 20px;
+    background-color: red;
+    margin: 0;
 }
-/* div#last-two {
-    display: flex;
-    width: 500px;
-    height: fit-content;
-    justify-content: space-evenly;
-} */
+
 #creator {
-    /* width: 20%; */
     height: max-content;
     display: inline-block;
     background-color: #57C5B6;
@@ -137,7 +213,6 @@ form p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* width: 60%; */
     padding: 5px;
     padding-bottom: 20px;
 }
@@ -151,6 +226,7 @@ a#chordTriad:hover {
     color: #002B5B;
     background-color: #57C5B6;
 }
+
 
 main a {
     font-size: 30px;
@@ -175,42 +251,33 @@ a#finCh:hover {
     background-color: #57C5B6;
     border: 1px solid gray;
 }
-
-a#back-button {
-    border: 2px solid #0af;
-    /* color: #002B5B; */
-    font-size: 20px;
-    padding: 2px 3px;
-    position: fixed;
-    left: 50px;
-    top: 50px;
+.onClicks {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
 }
 
-/* input {
-    font-size: 40px;
-} */
-/* div {
-    margin: 30px;
-} */
-/* h5 {
-    margin:auto;
-    font-size: large;
-    background-color: #222;
-} */
 
-.chNnotes {
-    font-size: 50px;
-    /* border: 3px solid red; */
-    /* background-color: red; */
-    text-decoration: underline dotted red;
-    display: block;
-    width: 50%;
-    margin: 0 25%;
+
+#labels {
+    font-size: 300%;
+    color: black;
+    /* text-decoration: underline dotted red; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
 }
+#labels p {
+    margin: 1%;
+}
+
+
+
 
 .board {
     display: flex;
-    /* flex-direction: column;*/
+    flex-direction: column;
     justify-content: center; 
     margin-top: 10px;
 }
@@ -225,21 +292,31 @@ a#back-button {
     color: black;
     background-color: #57C5B6;
 }
-/* .notes {
-    overflow: auto;
-} */
 .board p {
     font-weight: 900;
-    font-size: 16px;
+    font-size: 20px;
+    margin: 0%;
+}
+.notes {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    overflow-x: auto;
+}
+.written {
+    white-space: nowrap;
+    overflow-x: auto;
+    font-size: 50px;
+    display: none;
 }
 
 
 
-/* --------------------------TABLE------------------------- */
+/* --------------------------TABLE-------------------------- */
 
 table {
     margin: 10px;
-    min-width: 1000px;
+    min-width: 1300px;
     background-color: #0f0;
     border-collapse: separate!important;
     border-spacing: 2px!important;
@@ -254,7 +331,7 @@ thead {
     background-color: #678;
 }
 .fretsCl {
-    background-color: black;
+    color: black;
 }
 .one {
     background-color: #00a;
@@ -270,11 +347,27 @@ td {
     background-color: #007;
     color: #57C5B6;
 }
-/* --------------------------TABLES------------------------- */
+.first {
+    background-color: #1A5F7A;
+}
+/* --------------------------TABLES-------------------------- */
+
+#back-button-butt {
+    border: none;
+}
+#back-button {
+    border: 2px solid #0af;
+    background-color: #000;
+    /* font-size: 20px; */
+    height: 50px;
+    padding: 2px 3px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
 
 
-
-/* ----------------Sizes----------------- */
+/* --------------------------Sizes-------------------------- */
 
 @media only screen and (max-width: 1000px) {
     header h1 {
@@ -286,10 +379,8 @@ td {
     h6 {
         font-size: 25px;
     }
-    a#back-button {
-        position: fixed;
-        left: 25px;
-        top: 28px;
+    #back-button {
+        height: 30px;
     }
     #boxes {
         margin: 2% 0;
@@ -311,6 +402,9 @@ td {
         font-size: 20px;
         padding: 0;
         margin: 0;
+    }
+    #labels {
+        font-size: 200%;
     }
     select {
         font-size: 20px;
@@ -349,19 +443,21 @@ td {
         padding: 5px; 
         width: 75%;
     }
-    a#back-button {
+    #back-button {
         left: 0;
-        top: 27px;
+        top: 80px;
         font-size: 15px;
     }
     #update {
         display: inline-block;
     }
+    #labels {
+        font-size: 150%;
+    }
 }
 @media only screen and (max-width: 400px) {
-    a#back-button {
-        left: 1px;
-        top: 1px;
+    #back-button {
+        height: 20px;
     }
 }
 
