@@ -5,7 +5,7 @@ body {
     background-color: #002B5B;
     overflow: auto;
     min-height: 200%;
-    min-width: 100%;
+    min-width: 98%;
 }
 header {
     color: #000;
@@ -263,7 +263,6 @@ a#finCh:hover {
 #labels {
     font-size: 300%;
     color: black;
-    /* text-decoration: underline dotted red; */
     display: flex;
     justify-content: space-between;
     margin: 0 5%;
@@ -271,9 +270,6 @@ a#finCh:hover {
 #labels p {
     margin: 1%;
 }
-
-
-
 
 .board {
     display: flex;
@@ -302,14 +298,9 @@ a#finCh:hover {
     flex-direction: column;
     font-size: 30px;
     overflow-x: auto;
+    background-color: #57C5B6;
+    border: 3px solid #1A5F7A;
 }
-.written {
-    white-space: nowrap;
-    overflow-x: auto;
-    font-size: 50px;
-    display: none;
-}
-
 
 
 /* --------------------------TABLE-------------------------- */
@@ -317,7 +308,7 @@ a#finCh:hover {
 table {
     margin: 10px;
     min-width: 1300px;
-    background-color: #0f0;
+    background-color: #57C5B6;
     border-collapse: separate!important;
     border-spacing: 2px!important;
 }
@@ -327,11 +318,16 @@ thead {
     width: 100%;
     margin: 0;
 }
+section.notes {
+    padding: 5px;
+    background-color: #57C5B6;
+}
 .first {
     background-color: #678;
 }
 .fretsCl {
-    color: black;
+    background-color: black;
+    color: #57C5B6;
 }
 .one {
     background-color: #00a;
