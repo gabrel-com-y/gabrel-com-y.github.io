@@ -307,7 +307,7 @@ function drawGuitar(tri) {
     }
     
     // Set colors for other notes
-    let list1 = ['#fe4848', '#ff7979', 'orange', 'orange', 'orange'];
+    let list1 = ['#fe4848', '#ff7979', '#1A5F7A', '#1A5F7A'];
     for (item in fOthers) {
         console.dir(item);
         let id2 = '#'+fOthers[item];
@@ -332,6 +332,7 @@ function drawGuitar(tri) {
         if (a <= 76) {a++}
         else {break}
     }
+
 }
 
 // ------------------------------ OTHER FUNCTIONS ---------------------------
