@@ -82,6 +82,10 @@ div#button-ch {
     display: flex;
     font-size: 200%;
 }
+.btn-primary:hover {
+    color: #57C5B6!important;
+    background-color: #000!important;
+}
 a {
     color: #002B5B;
     /* background-color: rgba(0, 0, 0, 20%); */
