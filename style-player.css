@@ -1,22 +1,22 @@
 body {
     font-family: 'Courier Prime', monospace;
     text-align: center;
-    color: #57C5B6;
-    background-color: #002B5B;
+    color: #90e0ef;
+    background-color: #03045e;
     overflow: auto;
     min-height: 200%;
     min-width: 98%;
 }
 header {
-    color: #000;
+    color: #03045e;
     font-family: 'Courier Prime', monospace;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
     margin: 0% 5%;
     padding: 1%;
 }
 h1 a {
     text-decoration: none!important;
-    color: #000!important;
+    color: #03045e!important;
 }
 header h1 {
     font-size: 60px;
@@ -27,14 +27,15 @@ header h1 {
 header h2 {
     font-size: 45px;
     margin: 0;
-    border: 2px solid black;
+    border: 2px dashed #0077b6;
 }
 h6 {
     margin: 10px;
     height: fit-content;
     font-size: 30px;
     color: #002B5B;
-    border: 2px solid red;
+    text-decoration: underline #f00;
+    /* border: 2px solid red; */
 }
 
 
@@ -48,7 +49,7 @@ main {
 }
 
 form {
-    background-color: #57C5B6;
+    background-color: #90e0ef;
     font-size: 40px;
 }
 .boxess {
@@ -100,7 +101,7 @@ p#tooltip-text {
     background: rgb(26, 95, 122);
     padding: 8px;
     font-size: 1rem;
-    color: #fff;
+    color: #90e0ef;
     border-radius: 2px;
     /* animation: fadeIn 0.6s; */
 }
@@ -130,18 +131,18 @@ p#tooltip-text:before {
 button {
     font-size: 30px;
     margin: 0;
-    color: #57C5B6;
+    color: #90e0ef;
     background-color: #002B5B;
 }
 button:hover {
     color: #002B5B;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
 }
 select {
     font-size: 25px;
     cursor: pointer;
-    color: #57C5B6;
-    background-color: #1A5F7A;
+    color: #90e0ef;
+    background-color: #0077b6;
     text-align: center;
 }
 select#mainChord {
@@ -149,7 +150,7 @@ select#mainChord {
     font-size: 25px;
 }
 select:hover{
-    color: #57C5B6;
+    color: #90e0ef;
     background-color: #002B5B;
 }
 input#minor {
@@ -160,7 +161,8 @@ input#minor {
 form p {
     font-size: 50px;
     margin: 0;
-    border: 2px solid red;
+    text-decoration: underline #f00;
+    /* border: 2px solid red; */
     padding: 0;
 }
 .hidden {
@@ -203,7 +205,7 @@ form p {
 #creator {
     height: max-content;
     display: inline-block;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
     align-items:center;
     padding: 10px;
     padding-bottom: 20px;
@@ -218,13 +220,13 @@ form p {
 }
 a#chordTriad {
     background-color: #002B5B;
-    color: #57C5B6;
+    color: #90e0ef;
     cursor: pointer;    
-    border: 1px solid gray;
+    border: 1px solid #0077b6;
 }
 a#chordTriad:hover {
     color: #002B5B;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
 }
 
 
@@ -232,24 +234,24 @@ main a {
     font-size: 30px;
     text-decoration: none;
     padding: 0 10px;
-    color: #57C5B6;
+    color: #90e0ef;
     background-color: #002B5B;
 }
 main a:hover {
     color: #002B5B;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
 }
 a#finCh {
     background-color: #002B5B;
-    color: #57C5B6;
+    color: #90e0ef;
     font-size: 50px;   
     margin: 30px 0;
     cursor: pointer;
 }
 a#finCh:hover {
     color: #002B5B;
-    background-color: #57C5B6;
-    border: 1px solid gray;
+    background-color: #90e0ef;
+    border: 1px solid #0077b6;
 }
 .onClicks {
     padding: 0;
@@ -269,6 +271,7 @@ a#finCh:hover {
 }
 #labels p {
     margin: 1%;
+    padding: 1%;
 }
 
 .board {
@@ -286,7 +289,7 @@ a#finCh:hover {
     overflow-x: auto;
     white-space: nowrap;
     color: black;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
 }
 .board p {
     font-weight: 900;
@@ -298,8 +301,8 @@ a#finCh:hover {
     flex-direction: column;
     font-size: 30px;
     overflow-x: auto;
-    background-color: #57C5B6;
-    border: 3px solid #1A5F7A;
+    background-color: #90e0ef;
+    border: 3px solid #0077b6;
 }
 
 
@@ -308,32 +311,32 @@ a#finCh:hover {
 table {
     margin: 10px;
     min-width: 1300px;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
     border-collapse: separate!important;
     border-spacing: 2px!important;
 }
 thead {
-    background-color: #678;
-    color: #57C5B6;
+    background-color: #030470;
+    color: #90e0ef;
     width: 100%;
     margin: 0;
 }
 section.notes {
     padding: 5px;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
 }
 .first {
-    background-color: #678;
+    background-color: #aaa;
 }
 .fretsCl {
-    background-color: black;
-    color: #57C5B6;
+    background-color: #03045e;
+    color: #90e0ef;
 }
 .one {
-    background-color: #00a;
+    background-color: #03045e;
 }
 .other {
-    background-color: #007;
+    background-color: #023e8a;
 }
 th {
     width: 100px;
@@ -341,10 +344,10 @@ th {
 }
 td {
     background-color: #007;
-    color: #57C5B6;
+    color: #90e0ef;
 }
 .first {
-    background-color: #1A5F7A;
+    background-color: #0077b6;
 }
 /* --------------------------TABLES-------------------------- */
 
@@ -355,7 +358,7 @@ td {
 }
 #back-button {
     border: 2px solid #0af;
-    background-color: #000;
+    background-color: #03045e;
     /* font-size: 20px; */
     height: 50px;
     padding: 2px 3px;
@@ -464,8 +467,8 @@ td {
 
 
 .btn-primary {
-    color: #1A5F7A!important;
-    background-color: #57C5B6!important;
+    color: #0077b6!important;
+    background-color: #90e0ef!important;
     text-shadow: none;
     margin: 0 0 10%;
     padding: 6px 12px;
@@ -480,8 +483,8 @@ td {
 }
 .aClass .bigone {
     font-size: 30px!important;
-    color: #1A5F7A!important;
-    background-color: #57C5B6!important;
+    color: #0077b6!important;
+    background-color: #90e0ef!important;
     text-shadow: none;
     margin: 0 0 30px;
     padding: 6px 12px;
@@ -491,7 +494,7 @@ td {
 }
 .chords { 
     white-space: nowrap;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
     background-size: cover;
     font-family: 'Courier Prime', monospace;
     color: green;

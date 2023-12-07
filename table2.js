@@ -302,12 +302,12 @@ function drawGuitar(tri) {
 
     for (let i = 0; i < max; i++) {
         let every = redR[i];
-        every.style.backgroundColor = 'red';
-        every.style.color = 'white';
+        every.style.backgroundColor = '#023e8a';
+        every.style.color = '#caf0f8';
     }
     
     // Set colors for other notes
-    let list1 = ['#fe4848', '#ff7979', '#1A5F7A', '#1A5F7A'];
+    let list1 = ['#015db3', '#0096c7', '#90e0ef', '#90e0ef'];
     for (item in fOthers) {
         console.dir(item);
         let id2 = '#'+fOthers[item];
@@ -326,8 +326,8 @@ function drawGuitar(tri) {
     for (cell in previous) {
         let cell = previous[a];
         if (cell.style.backgroundColor == '') {
-            cell.style.color = 'gray';
-            cell.style.backgroundColor = 'black';
+            cell.style.color = '#03045e';
+            cell.style.backgroundColor = '#caf0f8';
         }
         if (a <= 76) {a++}
         else {break}

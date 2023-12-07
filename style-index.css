@@ -6,29 +6,29 @@ body {
     text-align: center;
     color: #0f0;
     /* background: linear-gradient(#002B5B, #57C5B6, #002B5B); */
-    background-color: #002B5B;
+    background-color: #03045e;
     font-size: 100px;
 }
 header {
     display: flex;
     flex-direction: column;
-    color: black;
+    color: #03045e;
     font-family: 'Courier Prime', monospace;
-    background-color: #57C5B6;
+    background-color: #90e0ef;
     margin: 2%;
 }
 header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 70%;
     margin: 0;
-    font-style: oblique;
+    /* font-style: oblique; */
 }
 header h2 {
     font-size: 30px;
     padding: 0 1% 1%;
-    border: 2px solid #000;
+    border: 2px dashed #0077b6;
     margin: 1%;
     align-items: center;
 }
@@ -42,28 +42,28 @@ div {
     background-color: rgba(0, 0, 0, 20%);
     background-size: cover;
     font-family: 'Courier Prime', monospace;
-    color: #051;
+    color: #03045e;
     font-size: 20px;
     margin: 0 1%;
     align-items: center;
 }
 #expl {
     font-size: 100%;
-    color: #002B5B;
-    background-color: #57C5B6;
-    border: 3px solid #1A5F7A;
+    color: #03045e;
+    background-color: #90e0ef;
+    border: 3px solid #0077b6;
     padding: 2%;
 }
 #chDef {
     font-size: 30%;
     padding: 1% 1%;
-    background-color: #57C5B6;
-    border: 3px solid #1A5F7A;
+    background-color: #90e0ef;
+    border: 3px solid #0077b6;
     border-radius: 5px;
 }
 nav p {
     font-size: 150%;
-    color: #002B5B;
+    color: #03045e;
     margin: 0;
     padding: 0;
 }
@@ -74,8 +74,8 @@ div#button-ch {
     padding: 0;
 }
 .btn-primary {
-    color: #57C5B6!important;
-    background-color: #1A5F7A!important;
+    color: #90e0ef!important;
+    background-color: #00b4d8!important;
     height: 75%;
     width: 100%;
     align-items: center;
@@ -83,25 +83,25 @@ div#button-ch {
     text-shadow: none;
     text-decoration: none;
     cursor: pointer;
-    border: 3px solid white;
+    border: 3px solid #0077b6;
     border-radius: 5px;
     display: flex;
     font-size: 200%;
 }
 .btn-primary:hover {
-    color: #57C5B6!important;
-    background-color: #000!important;
+    color: #90e0ef!important;
+    background-color: #0077b6!important;
 }
 a {
-    color: #002B5B;
+    color: #03045e;
     /* background-color: rgba(0, 0, 0, 20%); */
 }
 
 #chord-sec {
     margin-top: 3%;
-    color: #002B5B;
-    background-color: #57C5B6;
-    border: 3px solid #1A5F7A;
+    color: #03045e;
+    background-color: #90e0ef;
+    border: 3px solid #0077b6;
 }
 #fret-title {
     padding: 1% 5%;
@@ -109,7 +109,7 @@ a {
     font-size: 200%;
 }
 p#frets {
-    color: #57C5B6;
+    color: #90e0ef;
     margin-bottom: 7px;
 }
 
@@ -121,34 +121,34 @@ table {
 
 }
 thead {
-    background-color: #678;
-    color: #57C5B6;
+    background-color: #0077b6;
+    color: #90e0ef;
 }
 th {
     width: 100px;
 }
 td {
-    background-color: #007;
+    background-color: #03045e;
     color: #57C5B6;
 }
 .first {
-    background-color: #678;
+    background-color: #aaa;
 }
 .fretsCl {
     background-color: black;
 }
 .one {
-    background-color: #007;
+    background-color: #03045e;
 }
 .other {
-    background-color: #00a;
+    background-color: #023e8a;
 }
 
 
 
 
 .notes {
-    background-color: #57C5B6;
+    background-color: #90e0ef;
     justify-content: center;
     overflow-x: auto;
     white-space: nowrap;
