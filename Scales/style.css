@@ -1,0 +1,21 @@
+body {
+    color: black;
+    background-color: rgb(255, 252, 255);
+}
+header {
+    align-items: center;
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid;
+    text-align: center;
+
+    
+}
+table {
+    color: blue;
+    width: 100%;
+}
+td {
+    color: black;
+}
