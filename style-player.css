@@ -116,16 +116,6 @@ p#tooltip-text:before {
     border: 8px solid transparent;
     border-top: 8px solid red;
   }
-  
-  /* @keyframes fadeIn {
-   from {
-     opacity: 0;
-   }
-   to {
-     opacity: 1;
-   }
-  } */
-
 
 /*---------------------------------------------------*/
 button {

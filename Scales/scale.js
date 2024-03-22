@@ -7,30 +7,54 @@ let allBemol = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
 let major = [0, 2, 4, 5, 7, 9, 11, 12];
 let minor = [0, 2, 3, 5, 7, 8, 10, 12];
 
-let first;
-let second;
-let third;
-let forth;
-let fifth;
-let letter = "C";
-let mainList;
+let letter;
+let mainList = allSharp;
 let finList = [];
+let listType;
 
 function choose() {
+    //Start list from nothing
     finList = [];
+    // Get chosen letter 
     letter = document.getElementById("chord").value;
-
-    // Set to use bemol or sharp scale
-    if (letter.includes("b")) {mainList = allBemol;} else {mainList = allSharp;}    
-      
-    let pos = mainList.indexOf(letter);
 
     // Choose either Major or Minor scale
     scTy = document.getElementById("type").value;
-    let listType;
-    if (scTy == 'Ma') {listType = major;} else if (scTy = 'Mi'){listType = minor;}
+    
+    if (scTy == 'Ma') {
+        listType = major;
+    } else if (scTy = 'Mi') {
+        listType = minor;
+    }
+
+    // Find chord's position (pos)
+    let pos = mainList.indexOf(letter);
+    // Correct if mainList does not contain Chord
+    if (pos == -1) {
+        if (mainList == allSharp) {
+            mainList = allBemol;
+        } else {mainList = allSharp;}
+        pos = mainList.indexOf(letter);
+    }
+
 
     // Add scale notes to list and to page
+    mkScale(listType, mainList, pos);
+
+    // Set to use bemol or sharp scale
+    bemolOrSharp();
+
+    mkScale(listType, mainList, pos);
+
+    document.querySelector('#scale1').innerHTML = finList;
+
+    // Create progression from scale    
+    progression(finList);
+    
+}
+
+function mkScale(listType, mainList, pos) {
+    finList = [];
     for (numb in listType) {
         numInPlace = listType[numb]+pos;
         if (numInPlace > 11) {
@@ -38,11 +62,28 @@ function choose() {
         }
         finList.push(mainList[numInPlace]);
     }
-    document.querySelector('#scale1').innerHTML = finList;
-    console.log(finList);
+}
 
-    // Create progression from scale    
+function bemolOrSharp() {
+    for (let i = 0; i < finList.length; i++) {
 
+        curr = finList[i];
+        if (finList[i+1] != undefined) {
+            following = finList[i+1];
+            if (curr[0] == following[0]) {
+                if (mainList == allSharp) {
+                    mainList = allBemol;
+                } else {mainList = allSharp;}
+                break
+            }
+        } else {break;}
+    }
+        
+}
+
+
+
+function progression(finList) {
     // Progression 1
     let pro1List = [];
     let pro1 = [0, 4, 5, 3];
@@ -55,7 +96,7 @@ function choose() {
         pro1List.push(find);
     }
     document.querySelector('#pro1').innerHTML = pro1List;
-    
+
     // Progression 2
     let pro2List = [];
     let pro2 = [0, 3, 5, 4];
@@ -82,14 +123,3 @@ function choose() {
     }
     document.querySelector('#pro3').innerHTML = pro3List;
 }
-
-
-// Create progression from scale - primary
-// let proList = [];
-// let pro = [0, 4, 5, 3];
-
-// for (num in pro) {
-//     pos = pro[num];
-//     proList.push(finList[pos]);
-// }
-// document.querySelector('#pro').innerHTML = proList;

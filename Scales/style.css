@@ -1,3 +1,7 @@
+:root {
+    --color: #90e0ef;
+    --border3blu: 3px solid #0077b6;
+}
 body {
     color: black;
     font-family: 'Courier Prime', monospace;
@@ -5,13 +9,15 @@ body {
     background-color: #002B5B;
     /* font-size: 100px; */
 }
-header {
+header { 
     align-items: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     margin: 2%;
-    background-color: #57C5B6;
+    background-color: var(--color);
+    border: var(--border3blu);
+    border-radius: 5px;
 }
 main {
     width: 100%;
@@ -19,14 +25,14 @@ main {
 }
 
 .blocs {
-    background-color: #57C5B6;
+    background-color: var(--color);
     background-size: cover;
-    font-family: 'Courier Prime', monospace;
+    /* font-family: 'Courier Prime', monospace; */
     color: #002B5B;
     font-size: 20px;
     margin: 0 1%;
     align-items: center;
-    border: 2px solid black;
+    border: var(--border3blu);
     margin-bottom: 10px;
     margin-left: 15%;
     margin-right: 15%;
@@ -36,13 +42,16 @@ h3 {
     font-size: 200%;
 }
 
+#divScroll {
+    overflow-x: auto;
+}
 table, th, td {
     border: 1px solid;
     text-align: center;    
 }
 table {
     color: blue;
-    background-color: #57C5B6;
+    background-color: var(--color);
     font-size: 200%;
     width: 94%;
 }
@@ -50,7 +59,7 @@ td {
     color: black;
 }
 a {
-    background-color: #57C5B6;
+    background-color: var(--color);
     text-decoration: none;
     color: black;
 
