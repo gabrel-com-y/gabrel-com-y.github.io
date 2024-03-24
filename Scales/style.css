@@ -1,14 +1,16 @@
 :root {
     --color: #90e0ef;
+    --bgcolor: #002B5B;
     --border3blu: 3px solid #0077b6;
 }
 body {
     color: black;
     font-family: 'Courier Prime', monospace;
     text-align: center;
-    background-color: #002B5B;
+    background-color: var(--bgcolor);
     /* font-size: 100px; */
 }
+
 header { 
     align-items: center;
     text-align: center;
@@ -28,7 +30,7 @@ main {
     background-color: var(--color);
     background-size: cover;
     /* font-family: 'Courier Prime', monospace; */
-    color: #002B5B;
+    color: var(--bgcolor)B;
     font-size: 20px;
     margin: 0 1%;
     align-items: center;
