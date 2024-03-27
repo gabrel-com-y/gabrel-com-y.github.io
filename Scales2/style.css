@@ -24,29 +24,40 @@ header {
 main {
     width: 100%;
     display: block;
+    justify-items: center;
+    padding: 5%;
 }
 
 .blocs {
     background-color: var(--color);
     background-size: cover;
-    /* font-family: 'Courier Prime', monospace; */
     color: var(--bgcolor);
     font-size: 20px;
     margin: 0 1%;
     align-items: center;
     border: var(--border3blu);
     margin-bottom: 10px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 10px;
 }
 h3 {
     font-size: 200%;
 }
 
-#divScroll {
+.divScroll {
     overflow-x: auto;
 }
+
+.blcSelects {
+    display: flex;
+    flex-direction: row;
+}
+
+#recommended {
+    align-items: center;
+}
+
 table, th, td {
     border: 1px solid;
     text-align: center;    
@@ -54,8 +65,10 @@ table, th, td {
 table {
     color: blue;
     background-color: var(--color);
-    font-size: 200%;
     width: 94%;
+}
+#progTable {
+    font-size: 200%;
 }
 td {
     color: black;

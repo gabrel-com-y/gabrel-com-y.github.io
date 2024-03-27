@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Scale - Maker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html" style="text-decoration: none; color: black;">Scale Maker</a></h1>  
+        <h2>Discover any scale formation in a few steps</h2>
+    </header>
+    <main>
+        <div class="blocs">
+            <h3>Scale Type</h3>
+            <select id="type">
+                <option value="Ma">Major</option>
+                <option value="Mi">Minor</option>
+            </select>
+        </div>
+        <div class="blocs">
+            <h3>Choose a chord:</h3>
+            <select id="chord" class="form-select form-select-lg mb-3">
+                <option value="C">C</option>
+                <option value="C#">C#/Db</option>
+                <option value="D">D</option>
+                <option value="D#">D#/Eb</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="F#">F#/Gb</option>
+                <option value="G">G</option>
+                <option value="G#">G#/Ab</option>
+                <option value="A">A</option>
+                <option value="A#">A#/Bb</option>
+                <option value="B">B</option>
+            </select>
+            <button type="button" class="btn btn-success" onclick="choose()">Ready</button>
+        </div>
+        <div class="blocs">
+            <h3>Your harmonic scale:</h3>
+            <div class="divScroll">
+                <table id="wholeScale">
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>...</th>
+                    </tr>
+                    <tr>
+                        <th id="t1">Tonic</th> 
+                        <th id="t2">Supertonic</th>
+                        <th id="t3">Mediant</th>
+                        <th id="t4">Subdominant</th>
+                        <th id="t5">Dominant</th>
+                        <th id="t6">Submediant</th>
+                        <th id="t7">Leading tone</th>
+                        <th id="t8">...</th>
+                    </tr>
+                    <tr>
+                        <td id="r1">-</td>
+                        <td id="r2">-</td>
+                        <td id="r3">-</td>
+                        <td id="r4">-</td>
+                        <td id="r5">-</td>
+                        <td id="r6">-</td>
+                        <td id="r7">-</td>
+                        <th>...</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="divScroll">
+            <!-- Create a choose-your-progression dropdown -->
+            <h2 class="h1" style="background-color: white;">Choose your Progression:</h2>
+            <div class="divScroll blcSelects">
+                <select name="progr" id="note1" class="form-select form-select-lg m-3">
+                    <option value="0">(1) Tonic/T </option>
+                    <option value="1">(2) Supertonic/Subdominant </option>
+                    <option value="2">(3) Mediant/T </option>
+                    <option value="3">(4) Subdominant </option>
+                    <option value="4">(5) Dominant </option>
+                    <option value="5">(6) Submediant/T </option>
+                    <option value="6">(7) Leading/Dominant </option>
+                </select>
+                <select name="progr" id="note2" class="form-select form-select-lg m-3">
+                    <option value="0">(1) Tonic/T </option>
+                    <option value="1">(2) Supertonic/Subdominant </option>
+                    <option value="2">(3) Mediant/T </option>
+                    <option value="3">(4) Subdominant </option>
+                    <option value="4">(5) Dominant </option>
+                    <option value="5">(6) Submediant/T </option>
+                    <option value="6">(7) Leading/Dominant </option>
+                </select>
+                <select name="progr" id="note3" class="form-select form-select-lg m-3">
+                    <option value="0">(1) Tonic/T </option>
+                    <option value="1">(2) Supertonic/Subdominant </option>
+                    <option value="2">(3) Mediant/T </option>
+                    <option value="3">(4) Subdominant </option>
+                    <option value="4">(5) Dominant </option>
+                    <option value="5">(6) Submediant/T </option>
+                    <option value="6">(7) Leading/Dominant </option>
+                </select>
+                <select name="progr" id="note4" class="form-select form-select-lg m-3">
+                    <option value="0">(1) Tonic/T </option>
+                    <option value="1">(2) Supertonic/Subdominant </option>
+                    <option value="2">(3) Mediant/T </option>
+                    <option value="3">(4) Subdominant </option>
+                    <option value="4">(5) Dominant </option>
+                    <option value="5">(6) Submediant/T </option>
+                    <option value="6">(7) Leading/Dominant </option>
+                </select>
+            </div>
+            <h3 id="progression" class="text-bg-info border border-white rounded"> - Your Progression - </h3>
+            
+            <button type="button" class="btn btn-success m-3" onclick="progression(finList)">Update</button>
+        </div>
+        <div id="recommended" class="text-bg-success border border-white rounded">
+            <h3>Recommended Progressions:</h3>
+            <h4>
+                <li>1,4,6,5</li>
+                <li>1,5,6,4</li>
+                <li>1,6,4,5</li>
+            </h4>
+        </div>
+        <a href="../index.html" class="btn btn-success m-3 p-3">Back</a>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript" src="scale.js"></script>
+</html>
