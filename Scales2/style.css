@@ -1,14 +1,19 @@
 :root {
+    --wt: #fff;
     --color: #90e0ef;
     --bgcolor: #002B5B;
+    --clbl: #0077b6;
     --border3blu: 3px solid #0077b6;
 }
 body {
     color: black;
     font-family: 'Courier Prime', monospace;
     text-align: center;
-    background-color: var(--bgcolor);
+    background-color: #ffffff;
     /* font-size: 100px; */
+    min-width: 320px;        /* Suppose you want minimum width of 320px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width: 320px;            /* As IE6 ignores !important it will set width as 1000px; */
 }
 
 header { 
@@ -17,9 +22,14 @@ header {
     display: flex;
     flex-direction: column;
     margin: 2%;
-    background-color: var(--color);
-    border: var(--border3blu);
+    /* background-color: var(--color); */
+    /* border: var(--border3blu); */
     border-radius: 5px;
+}
+#imgHead {
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 main {
     width: 100%;
@@ -29,9 +39,9 @@ main {
 }
 
 .blocs {
-    background-color: var(--color);
+    background-color: #0077b5;
     background-size: cover;
-    color: var(--bgcolor);
+    color: #fff;
     font-size: 20px;
     margin: 0 1%;
     align-items: center;
@@ -48,6 +58,18 @@ h3 {
 .divScroll {
     overflow-x: auto;
 }
+
+.wholescaleV {
+    display: none;
+}
+.wholescaleH {
+    display: flex;
+    justify-content: center;
+}
+
+/* .flexscale {
+    display: flex;
+} */
 
 .blcSelects {
     display: flex;
@@ -74,9 +96,35 @@ td {
     color: black;
 }
 a {
-    background-color: var(--color);
+    /* background-color: var(--color); */
     text-decoration: none;
     color: black;
+}
 
+@media only screen and (min-width:1000px) {
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+}
+
+@media only screen and (max-width: 850px) {
+    /* .wholescaleV {
+        display: none;
+    }
+    .wholescaleH {
+        display: flex;
+    } */
+}
+
+@media only screen and (max-width: 700px) {
+    .wholescaleV {
+        display: flex;
+        justify-content: center;
+    }
+    .wholescaleH {
+        display: none;
+    }
 }
 

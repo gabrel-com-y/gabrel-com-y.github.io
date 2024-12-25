@@ -6,15 +6,18 @@ body {
     text-align: center;
     color: #0f0;
     /* background: linear-gradient(#002B5B, #57C5B6, #002B5B); */
-    background-color: #03045e;
+    background-color: #ffffff;  
     font-size: 100px;
+    min-width: 420px;        /* Suppose you want minimum width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width: 320px;            /* As IE6 ignores !important it will set width as 1000px; */
 }
 header {
     display: flex;
     flex-direction: column;
     color: #03045e;
-    font-family: 'Courier Prime', monospace;
-    background-color: #90e0ef;
+    background-color: #fff;
+    /* border: 2px solid #0077b6; */
     margin: 2%;
 }
 header h1 {
@@ -28,7 +31,7 @@ header h1 {
 header h2 {
     font-size: 30px;
     padding: 0 1% 1%;
-    border: 2px dashed #0077b6;
+    /* border: 2px dashed #0077b6; */
     margin: 1%;
     align-items: center;
 }
@@ -41,29 +44,29 @@ main {
 div {
     background-color: rgba(0, 0, 0, 20%);
     background-size: cover;
-    font-family: 'Courier Prime', monospace;
-    color: #03045e;
+    color: #fff;
     font-size: 20px;
     margin: 0 1%;
     align-items: center;
 }
 #expl {
     font-size: 100%;
-    color: #03045e;
-    background-color: #90e0ef;
-    border: 3px solid #0077b6;
+    color: #fff;
+    background-color: #0077b6;
+    /* border: 3px solid #0077b6; */
     padding: 2%;
 }
 #chDef {
     font-size: 30%;
     padding: 1% 1%;
-    background-color: #90e0ef;
-    border: 3px solid #0077b6;
+    color: #fff;
+    background-color: #0077b6;
+    /* border: 3px solid #0077b6; */
     border-radius: 5px;
 }
 nav p {
     font-size: 150%;
-    color: #03045e;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
@@ -71,11 +74,11 @@ div#button-ch {
     display: flex;
     background-color: transparent;
     /* align-items: center; */
-    padding: 0;
+    padding: 3px;
 }
 .btn-primary {
-    color: #90e0ef!important;
-    background-color: #00b4d8!important;
+    color: #03045e!important;
+    background-color: #ffffff!important;
     height: 75%;
     width: 100%;
     margin-right: 10px;
@@ -84,25 +87,26 @@ div#button-ch {
     text-shadow: none;
     text-decoration: none;
     cursor: pointer;
-    border: 3px solid #0077b6;
-    border-radius: 5px;
+    border: 3px solid #b6b6b6;
+    border-radius: 7px;
     display: flex;
-    font-size: 200%;
+    font-size: 175%;
 }
 .btn-primary:hover {
-    color: #90e0ef!important;
+    color: #fff!important;
     background-color: #0077b6!important;
 }
 a {
-    color: #03045e;
+    color: #fff;
     /* background-color: rgba(0, 0, 0, 20%); */
 }
 
 #chord-sec {
     margin-top: 3%;
     color: #03045e;
-    background-color: #90e0ef;
-    border: 3px solid #0077b6;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 6px;
 }
 #fret-title {
     padding: 1% 5%;
@@ -110,7 +114,7 @@ a {
     font-size: 200%;
 }
 p#frets {
-    color: #90e0ef;
+    color: #fff;
     margin-bottom: 7px;
 }
 
@@ -123,7 +127,7 @@ table {
 }
 thead {
     background-color: #0077b6;
-    color: #90e0ef;
+    color: #fff;
 }
 th {
     width: 100px;
@@ -149,7 +153,7 @@ td {
 
 
 .notes {
-    background-color: #90e0ef;
+    background-color: #fff;
     justify-content: center;
     overflow-x: auto;
     white-space: nowrap;
@@ -189,7 +193,7 @@ li {
     #button-ch {
         width: 30%;
     }
-    hr {display: none;}
+    /* hr {display: none;} */
 }
 
 @media only screen and (max-width: 1000px) {
