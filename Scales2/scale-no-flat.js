@@ -1,7 +1,5 @@
 // CREATE GUITAR LISTS
 let allSharp = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-    // let allSharp = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'Cm', 'C#m', 'Dm', 'D#m', 'Em', 'Fm', 'F#m', 'Gm', 'G#m', 'Am', 'A#m', 'Bm'];
-//let allBemol = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
 
 // SCALES
 let major = [0, 2, 4, 5, 7, 9, 11, 12];
@@ -29,15 +27,7 @@ function choose() {
     }
 
     // Find chord's position (pos)
-    let pos = mainList.indexOf(letter);
-    // Correct if mainList does not contain Chord
-    // if (pos == -1) {
-    //     if (mainList == allSharp) {
-    //         mainList = allBemol;
-    //     } else {mainList = allSharp;}
-    //     pos = mainList.indexOf(letter);
-    // }
-    
+    let pos = mainList.indexOf(letter);   
 
     // Add scale notes to list and to page
     mkScale(listType, mainList, pos);
@@ -45,14 +35,9 @@ function choose() {
     // Set to use bemol or sharp scale
     bemolOrSharp();
 
-    mkScale(listType, mainList, pos);
+    // mkScale(listType, mainList, pos);
 
     scaleInTable(finList);
-
-    // document.querySelector('#scale1').innerHTML = finList;
-
-
-    
 }
 
 function mkScale(listType, mainList, pos) {
@@ -79,12 +64,6 @@ function bemolOrSharp() {
         curr = finList[i];
         if (finList[i+1] != undefined) {
             following = finList[i+1];
-            // if (curr[0] == following[0]) {
-            //     if (mainList == allSharp) {
-            //         mainList = allBemol;
-            //     } else {mainList = allSharp;}
-            //     break
-            // }
         } else {break;}
     }
         
@@ -92,7 +71,6 @@ function bemolOrSharp() {
 
 // Create progression from scale    
 function progression(finList) {
-    
     
     let first = document.getElementById("note1").value;
     let second = document.getElementById("note2").value;
@@ -107,7 +85,7 @@ function progression(finList) {
 		proList.push(finList[x]);
     }
 	document.querySelector("#progression").innerHTML = proList;
-    
+
 }
 
 function scaleInTable(finList) {
