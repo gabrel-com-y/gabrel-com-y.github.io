@@ -51,6 +51,23 @@ main {
     margin-right: 5%;
     padding: 10px;
 }
+
+#firstHalf {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}   
+
+#harmoSca {
+    width: 100%;
+}
+
+#scaTab {
+    display: flex;
+    justify-content: center;
+
+}
+
 h3 {
     font-size: 200%;
 }
