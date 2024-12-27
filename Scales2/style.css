@@ -20,7 +20,7 @@ header {
     align-items: center;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 2%;
     /* background-color: var(--color); */
     /* border: var(--border3blu); */
@@ -56,7 +56,15 @@ main {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    align-content: center;
 }   
+
+#scaTyp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+}
 
 #harmoSca {
     width: 100%;
