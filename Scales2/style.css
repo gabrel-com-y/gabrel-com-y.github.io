@@ -30,16 +30,16 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
-}
+} 
 main {
     width: 100%;
     display: block;
     justify-items: center;
-    padding: 5%;
+    padding: 0 5% 5% 5%;
 }
 
 .blocs {
-    background-color: #0077b5;
+    background-color: var(--clbl);
     background-size: cover;
     color: #fff;
     font-size: 20px;
@@ -52,18 +52,43 @@ main {
     padding: 10px;
 }
 
-#firstHalf {
-    display: flex;
+.block-style {
+    background-color: var(--clbl);
+    background-size: cover;
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+    border: var(--border3blu);
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 100%;
+    border-radius: 10px;
     width: 100%;
+}
+
+.lgt-brdr {
+    border: 10px rgba(255, 255, 255, 80%);
+}
+
+#firstHalf {
+    background-color: var(--clbl);
+    display: flex;
     justify-content: space-evenly;
     align-content: center;
 }   
+
+.inBlock {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 #scaTyp {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: fit-content;
+    width: 100%;
 }
 
 #harmoSca {
@@ -73,7 +98,6 @@ main {
 #scaTab {
     display: flex;
     justify-content: center;
-
 }
 
 h3 {
@@ -92,13 +116,14 @@ h3 {
     justify-content: center;
 }
 
-/* .flexscale {
-    display: flex;
-} */
-
 .blcSelects {
     display: flex;
     flex-direction: row;
+}
+
+#progression {
+    background-color: var(--color);
+    color: var(--bgcolor);
 }
 
 #recommended {
@@ -125,6 +150,10 @@ a {
     text-decoration: none;
     color: black;
 }
+.my-bg {
+    background-color: var(--clbl)!important;
+    color: var(--wt)!important;
+}
 
 @media only screen and (min-width:1000px) {
 
@@ -150,6 +179,9 @@ a {
     }
     .wholescaleH {
         display: none;
+    }
+    #firstHalf {
+        display: block;
     }
 }
 
