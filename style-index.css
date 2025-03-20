@@ -1,10 +1,20 @@
+:root {
+    --dkblue: #03045e;
+    --othrblue: #023e8a;
+    --clrblue: #0077b6;
+    --wtrblue: #57C5B6;
+    --whitebg: #fff;
+    --blk: #000;
+
+
+}
 html {
     min-height: 98%;
 }
 body {
     font-family: 'Courier Prime', monospace;
     text-align: center;
-    color: #0f0;
+    /* color: #0f0; */
     /* background: linear-gradient(#002B5B, #57C5B6, #002B5B); */
     background-color: #ffffff;  
     font-size: 100px;
@@ -15,8 +25,8 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    color: #03045e;
-    background-color: #fff;
+    color: var(--dkblue);
+    background-color: var(--whitebg);
     /* border: 2px solid #0077b6; */
     margin: 2%;
 }
@@ -44,15 +54,15 @@ main {
 div {
     background-color: rgba(0, 0, 0, 20%);
     background-size: cover;
-    color: #fff;
+    color: var(--whitebg);
     font-size: 20px;
     margin: 0 1%;
     align-items: center;
 }
 #expl {
     font-size: 100%;
-    color: #fff;
-    background-color: #0077b6;
+    color: var(--whitebg);
+    background-color: var(--clrblue);
     /* border: 3px solid #0077b6; */
     padding: 2%;
 }
@@ -60,25 +70,29 @@ div {
     font-size: 30%;
     padding: 1% 1%;
     color: #fff;
-    background-color: #0077b6;
+    background-color: var(--clrblue);
     /* border: 3px solid #0077b6; */
     border-radius: 5px;
 }
+.chlink:hover{
+    color: var(--blk);
+}
 nav p {
     font-size: 150%;
-    color: #fff;
+    color: var(--whitebg);
     margin: 0;
     padding: 0;
 }
 div#button-ch {
     display: flex;
     background-color: transparent;
+    margin: 0;
     /* align-items: center; */
-    padding: 3px;
+    /* padding: 2px; */
 }
 .btn-primary {
-    color: #03045e!important;
-    background-color: #ffffff!important;
+    color: var(--dkblue)!important;
+    background-color: var(--whitebg)!important;
     height: 75%;
     width: 100%;
     margin-right: 10px;
@@ -87,25 +101,25 @@ div#button-ch {
     text-shadow: none;
     text-decoration: none;
     cursor: pointer;
-    border: 3px solid #b6b6b6;
+    /* border: 3px solid #b6b6b6; */
     border-radius: 7px;
     display: flex;
     font-size: 175%;
 }
 .btn-primary:hover {
-    color: #fff!important;
-    background-color: #0077b6!important;
+    color: var(--whitebg)!important;
+    background-color: var(--clrblue)!important;
 }
 a {
-    color: #fff;
+    color: var(--whitebg);
     /* background-color: rgba(0, 0, 0, 20%); */
 }
 
 #chord-sec {
-    margin-top: 3%;
-    color: #03045e;
-    background-color: #fff;
-    border: 1px solid black;
+    margin-top: 1%;
+    color: var(--dkblue);
+    background-color: var(--whitebg);
+    border: 1px solid var(--blk);
     border-radius: 6px;
 }
 #fret-title {
@@ -114,7 +128,7 @@ a {
     font-size: 200%;
 }
 p#frets {
-    color: #fff;
+    color: var(--whitebg);
     margin-bottom: 7px;
 }
 
@@ -126,47 +140,47 @@ table {
 
 }
 thead {
-    background-color: #0077b6;
+    background-color: var(--clrblue);
     color: #fff;
 }
 th {
     width: 100px;
 }
 td {
-    background-color: #03045e;
-    color: #57C5B6;
+    background-color: var(--dkblue);
+    color: var(--wtrblue);
 }
 .first {
     background-color: #aaa;
 }
 .fretsCl {
-    background-color: black;
+    background-color: var(--blk);
 }
 .one {
-    background-color: #03045e;
+    background-color: var(--dkblue);
 }
 .other {
-    background-color: #023e8a;
+    background-color: var(--othrblue);
 }
 
 
 
 
 .notes {
-    background-color: #fff;
+    background-color: var(--whitebg);
     justify-content: center;
     overflow-x: auto;
     white-space: nowrap;
 }
 .notes p {
     padding-top: 2px;
-    color: #199;
+    color: var(--wtrblue);
 }
 
 .button-list {
     text-align: center;
 }
-ul {
+/* ul {
     align-content: center;
     display: flex;
     text-align: center;
@@ -174,7 +188,7 @@ ul {
     background-color: #678;
     width: min-content;
 
-}
+} */
 li {
     list-style: none;
 
