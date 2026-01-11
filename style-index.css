@@ -5,6 +5,7 @@
     --wtrblue: #57C5B6;
     --whitebg: #fff;
     --blk: #000;
+    --red: #f00;
 
 
 }
@@ -66,6 +67,20 @@ div {
     /* border: 3px solid #0077b6; */
     padding: 2%;
 }
+.animate-fading {
+    animation: fading 2s infinite;
+  }
+  @keyframes fading {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 #chDef {
     font-size: 30%;
     padding: 1% 1%;
@@ -75,7 +90,7 @@ div {
     border-radius: 5px;
 }
 .chlink:hover{
-    color: var(--blk);
+    color: var(--red);
 }
 nav p {
     font-size: 150%;
@@ -109,6 +124,7 @@ div#button-ch {
 .btn-primary:hover {
     color: var(--whitebg)!important;
     background-color: var(--clrblue)!important;
+    animation: none;
 }
 a {
     color: var(--whitebg);
